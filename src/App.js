@@ -1,13 +1,11 @@
-import Navbar from './Componenets/Navigation/Navbar'
-import PhotoList from './Componenets/PhotoList/PhotoList';
-
+import Routing from "./Routing";
 import './App.css';
+
 
 function App() {
   return (
     <div className="App">
-      <PhotoList className='PhotoList'/>
-      <Navbar/>
+      <Routing/>
     </div>
   );
 }
