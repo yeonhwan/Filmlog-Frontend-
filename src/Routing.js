@@ -5,8 +5,8 @@ import Login from "./Components/Navigation/Login";
 import About from "./Components/Navigation/About";
 import Mypage from "./Components/Navigation/Mypage";
 import SignUp from "./Components/Forms/SignUp";
-
-import "./App.css";
+import Home from "./Components/Pages/Home";
+import '../src/Stylesheets/Routing.css'
 
 function Routing() {
   return (
@@ -16,9 +16,9 @@ function Routing() {
           <Route
             path="*"
             element={
-              <div>
-                <PhotoList />
-                <Navbar />
+              <div className="home">
+                <Navbar className='navbar-component'/>
+                <Home className='home-component'/>
               </div>
             }
           ></Route>
