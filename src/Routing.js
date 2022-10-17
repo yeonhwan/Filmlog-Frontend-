@@ -6,7 +6,7 @@ import About from "./Components/Navigation/About";
 import Mypage from "./Components/Navigation/Mypage";
 import SignUp from "./Components/Forms/SignUp";
 import Home from "./Components/Pages/Home";
-import '../src/Stylesheets/Routing.css'
+import '../src/Stylesheets/Routing.scss'
 
 function Routing() {
   return (

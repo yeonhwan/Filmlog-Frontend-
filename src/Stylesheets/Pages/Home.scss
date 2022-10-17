@@ -1,0 +1,84 @@
+@use '../base';
+
+.home-background-img {
+    background-image: url('../../../public/img/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width : 100vw;
+    height: 100vh;
+    @include base.layering();
+}
+
+.home-background-color-shaper {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to right,#dfa30b4a, rgba(127, 255, 212, 0.462));
+    @include base.layering(2);
+}
+
+
+main {
+    color : base.$font_color;
+    @include base.flex_box();
+    
+    .home-title-container {
+        inherits: none;
+        @include base.flex_box(column);
+        @include base.layering(3);
+        flex-wrap: wrap;
+        flex-grow: 1;
+        height: 100vh;
+        opacity: none;
+
+        .main-logo{
+            width: 6rem;
+            height: 6rem;
+        }
+
+        .home-title {
+            font-size: 90px;
+            font-family: base.$open_sans;
+            font-weight: 800;
+            color: white;
+        }
+
+        .home-title-underline {
+            width: 30vw;
+            height: 3px;
+            background-color: whitesmoke;
+        }
+
+        .home-title-phrases {
+            @include base.flex_box();
+            font-size: 28px;
+            width: 30vw;
+            height: 18vh;
+            flex-wrap: wrap;
+
+            .home-title-phrases-emphasis {
+                font-family: base.$open_sans;
+                color : base.$primary_color;
+                font-weight: 600;
+            }
+
+            p {
+                font-weight: 300;
+            }
+        }
+
+        .home-title-upload-button {
+            height: 10vh;
+            p { 
+                font-weight: 400;
+                color : rgb(214, 214, 214);
+            }
+        }
+
+    }
+
+    .home-photolist-container{
+        @include base.flex_box();
+        flex-grow: 2.3;
+        height: 100vh;
+    }
+}

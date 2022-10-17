@@ -1,6 +1,6 @@
 import React from "react";
 import CommentsList from "../Comments/CommentsList";
-import './Photo.css';
+import '../../Stylesheets/Components/Photo.scss';
 
 export default function Photo() {
   return (

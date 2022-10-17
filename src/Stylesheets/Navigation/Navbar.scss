@@ -1,0 +1,57 @@
+@use '../base';
+
+@mixin nav_font($weight : 400) {
+  font-family: base.$open_sans;
+  color : base.$font_color;
+  font-size: 18px;
+  font-weight: $weight;
+  text-align: center;
+}
+
+nav {
+  @include base.flex_box();
+  background: linear-gradient(to right,#a68745, #0a343e);
+  opacity: 0.9;
+  height: 55px;
+
+  .navbar-brand {
+    @include nav_font($weight : 800);
+    font-style: italic;
+    letter-spacing: 2px;
+
+  }
+  .nav-link {
+    @include nav_font($weight : 600);
+    font-size: 15px;
+  }
+  .darkmode-toggler {
+    @include base.flex_box();
+  }
+  i {
+    color: rgb(136, 136, 33);
+  }
+}
+
+.navbar-brands-container {
+  @include base.flex_box();
+
+  .navbar-logo {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+.navbar-container {
+  @include base.flex_box($direction : column);
+  flex-wrap: wrap;
+  width: 100vw;
+}
+
+.all-navbar-items-container{
+  width: 100vw;
+  @include base.flex_box();
+}
+
+.navbar-items-container{
+  @include base.flex_box($justify : flex-end);
+}

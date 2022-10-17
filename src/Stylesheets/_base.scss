@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+$open_sans : 'Open Sans', sans-serif;
+$font_color : whitesmoke;
+$primary_color : #DFA40B;
+
+@mixin flex_box($direction : row, $justify : center, $align : center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin layering($nth-layer : 1) {
+  position: relative;
+  z-index: $nth-layer;
+}
